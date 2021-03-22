@@ -1,0 +1,68 @@
+///////////////////////////////
+            // oyunda elenme işlemi :
+            if (kırmızı1alt>=arabaust && (kırmızı1alt-arabaust)>=6)
+            {
+                loser.Show();
+                timer1.Stop();
+            }
+            if (kırmızı2alt >= arabaust && (kırmızı2alt - arabaust) >= 6)
+            {
+                loser.Show();
+                timer1.Stop();
+            }
+            if (kırmızı1sag >= arabasol && (kırmızı1sag - arabasol) >= 6)
+            {
+                loser.Show();
+                timer1.Stop();
+            }
+            if (kırmızı2sag >= arabasol && (kırmızı2sag - arabasol) >= 6)
+            {
+                loser.Show();
+                timer1.Stop();
+            }
+            if (kırmızı1sol <= arabasag && (arabasag - kırmızı1sol) >= 6)
+            {
+                loser.Show();
+                timer1.Stop();
+            }
+            if (kırmızı2sol <= arabasag && (arabasag - kırmızı2sol) >= 6)
+            {
+                loser.Show();
+                timer1.Stop();
+            }
+            // her çağırıldığında skor +1 olacak.
+            void skorArtır()
+            {
+                int sk = int.Parse(lblSkor.Text);
+                sk++;
+                lblSkor.Text =sk.ToString();
+            }
+
+
+            //////////////////////////////////////////////
+            // puan alma işlemi :
+
+            if (mavi1alt >= arabaust && (mavi1alt - arabaust) >= 6)
+            {
+                skorArtır();
+            }
+            if (mavi2alt >= arabaust && (mavi2alt - arabaust) >= 6)
+            {
+                skorArtır();
+            }
+            if (mavi1sag >= arabasol && (mavi1sag - arabasol) >= 6)
+            {
+                skorArtır();
+            }
+            if (mavi2sag >= arabasol && (mavi2sag - arabasol) >= 6)
+            {
+                skorArtır();
+            }
+            if (mavi1sol <= arabasag && (arabasag - mavi1sol) >= 6)
+            {
+                skorArtır();
+            }
+            if (mavi2sol <= arabasag && (arabasag - mavi2sol) >= 6)
+            {
+                skorArtır();
+            }
